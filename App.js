@@ -10,6 +10,7 @@ export default function App() {
 
   // used as a helper function to setCourseGoals to be the spreaded currentGoals WITH  the newly entered goals
   const addGoalHandler = (goalTitle) => {
+    if (goalTitle.length === 0) return;
     setCourseGoals((currentGoals) => [
       ...currentGoals,
       { id: Math.random().toString(), value: goalTitle },
